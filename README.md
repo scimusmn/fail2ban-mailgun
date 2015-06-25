@@ -9,7 +9,7 @@ Download the app and set up config files.
     $ cd /usr/local/bin
     $ git clone https://github.com/scimusmn/fail2ban-mailgun.git
     $ cd fail2ban-mailgun
-    $ cp api.default.conf api.conf
+    $ cp mailgun_api.default.conf /etc/mailgun_api.conf
 
 Edit the api.conf file, adding your Mailgun API details.
 

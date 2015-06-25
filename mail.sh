@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get secrets
-source api.conf
+source /etc/mailgun_api.conf
 
 # Send mail message via Mailgun
 function send_sms {
