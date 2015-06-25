@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Get secrets
 source api.conf
