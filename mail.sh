@@ -10,7 +10,7 @@ function send_sms {
   https://api.mailgun.net/v3/$mailgun_domain/messages -F from='$from' \
   -F to='$to' \
   -F subject='$server - fail2ban $message an IP' \
-  -F text='fail2ban $1 IP: <ip>'"
+  -F text='fail2ban $1 IP: $2'"
   echo $mailgun_call
   eval $mailgun_call
   exit
@@ -19,8 +19,8 @@ function send_sms {
 if [ "$1" = 'ban' ]
 then
   message="banned"
-  send_sms $message
+  send_sms $message, $2
 else
   message="unbanned"
-  send_sms $message
+  send_sms $message, $2
 fi
