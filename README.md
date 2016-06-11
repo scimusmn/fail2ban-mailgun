@@ -19,8 +19,8 @@ Define a new action in fail2ban at: `/etc/fail2ban/action.d/mailgun.conf`
     actionstart =
     actionstop =
     actioncheck =
-    actionban = /usr/local/bin/fail2ban-mailgun/mail.sh ban
-    actionun = /usr/local/bin/fail2ban-mailgun/mail.sh unban
+    actionban = /usr/local/bin/fail2ban-mailgun/mail.sh ban <ip>
+    actionunban = /usr/local/bin/fail2ban-mailgun/mail.sh unban <ip>
 
 Modify or add an action entry in the jail you wish to configure. We're assuming
 that you've copied jail.conf to jail.local and will be adding this rule to the
